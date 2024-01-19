@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [message, setMessage] = useState("");
   async function getData() {
-    const res = await fetch("https://apionvercel.vercel.app/api/get");
+    const res = await fetch("/api/get");
     const data = await res.json();
     setMessage(data.message);
   }
